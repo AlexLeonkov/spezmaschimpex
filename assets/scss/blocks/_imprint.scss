@@ -1,0 +1,57 @@
+.imprint-section {
+  padding: 120px 0 60px;
+
+  @media (max-width: $screen-md) {
+    padding: 90px 0 40px;
+  }
+
+  h3 {
+    color: $secondary-color;
+    margin: 0 0 20px;
+  }
+
+  .imprint-wrap {
+    padding: 50px 40px;
+    border-radius: 15px;
+    background-color: rgba($main-color, .05);
+
+    @media (max-width: $screen-md) {
+      margin: 0 0 20px;
+      padding: 20px 24px;
+    }
+  }
+
+  .text-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+    }
+
+    > div {
+      flex: 1;
+    }
+
+    .items-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .item p span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .img-wrap {
+
+    @media (max-width: $screen-sm) {
+      margin: 20px 0 0;
+    }
+
+    img {
+      max-width: 240px;
+    }
+  }
+}

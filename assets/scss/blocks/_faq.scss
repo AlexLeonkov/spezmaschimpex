@@ -1,0 +1,94 @@
+.faq-section {
+  padding: 80px 0;
+
+  @media (max-width: $screen-md) {
+    padding: 60px 0;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .accordion-item {
+      border-radius: 15px;
+      background-color: $white-color;
+      border: 1px solid $light-border-color;
+      box-shadow: $card-box-shadow;
+      transition: $fast-transition;
+
+      .accordion-button {
+        padding: 30px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        @media (max-width: $screen-lg) {
+          padding: 20px 24px;
+          align-items: flex-start;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        &:not(.collapsed) {
+
+          h6 {
+            color: $main-color;
+          }
+
+          img {
+            transform: rotate(-135deg);
+          }
+        }
+
+        &.collapsed {
+
+          h6 {
+            color: $secondary-color;
+          }
+
+          img {
+            filter: brightness(.5);
+          }
+        }
+
+        h6 {
+
+          @media (max-width: $screen-lg) {
+            padding-right: 20px;
+          }
+        }
+
+        img {
+
+          @media (max-width: $screen-lg) {
+            max-width: 20px;
+          }
+        }
+      }
+
+      .accordion-body {
+        padding: 0 40px 30px;
+
+        @media (max-width: $screen-lg) {
+          padding: 0 24px 20px;
+        }
+      }
+    }
+  }
+
+  .faq-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+
+    @media (max-width: $screen-md) {
+      margin: 20px 0 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.certificates-section {
+  padding: 120px 0 60px;
+
+  @media (max-width: $screen-md) {
+    padding: 90px 0 40px;
+  }
+
+  .text-wrap {
+    margin: 0 0 40px;
+    padding: 50px 40px;
+    border-radius: 15px;
+    background-color: rgba($main-color, .05);
+
+    @media (max-width: $screen-md) {
+      margin: 0 0 20px;
+      padding: 20px 24px;
+    }
+
+    h3 {
+      color: $secondary-color;
+      margin: 0 0 20px;
+
+      @media (max-width: $screen-lg) {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  .items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .item {
+      width: calc((100% - 20px) / 2);
+
+      @media (max-width: $screen-sm) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

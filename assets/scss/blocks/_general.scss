@@ -1,0 +1,52 @@
+* {
+  transition: $fast-transition;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $light-body-bg-color;
+}
+
+.container {
+
+  @media (min-width: $screen-lg) {
+    max-width: 1170px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media (min-width: $screen-xxl) {
+    max-width: 1300px;
+  }
+
+  @media (max-width: $screen-lg) {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+
+//[class^="col-"] {
+//  padding: 0 8px;
+//}
+
+main {
+  overflow: hidden;
+}
+
+.headline-general {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 30px;
+  color: $secondary-color;
+
+  @media (max-width: $screen-md) {
+    margin: 0 0 20px;
+  }
+
+  img {
+    @media (max-width: $screen-md) {
+      max-width: 28px;
+    }
+  }
+}

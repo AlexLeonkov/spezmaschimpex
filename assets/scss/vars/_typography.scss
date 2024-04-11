@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap');
+
+$main-font: 'Manrope', sans-serif;
+$headline-font: 'Rubik', sans-serif;
+
+h1 {
+  font: 600 48px/1.1 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 28px;
+  }
+}
+
+h2 {
+  font: 600 40px/1.2 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font: 500 36px/1 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font: 500 32px/1.2 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 20px;
+  }
+}
+
+h5 {
+  font: 500 24px/1 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 18px;
+  }
+}
+
+h6 {
+  font: 500 20px/1.2 $headline-font;
+
+  @media (max-width: $screen-lg) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 16px;
+  }
+}
+
+p {
+  font: 400 16px/1.4 $main-font;
+
+  @media (max-width: $screen-md) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}

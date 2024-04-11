@@ -1,0 +1,130 @@
+.blog-section {
+  padding: 80px 0 0;
+  background-color: rgba(67, 146, 199, 0.05);
+
+  @media (max-width: $screen-md) {
+    padding: 60px 0 0;
+  }
+
+  .swiper {
+    position: relative;
+    padding-bottom: 80px;
+
+    @media (max-width: $screen-md) {
+      padding-bottom: 60px;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .swiper-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 48px;
+
+      @media (max-width: $screen-md) {
+        bottom: 28px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $main-color;
+    }
+  }
+
+  .item {
+    overflow: hidden;
+    border: 1px solid $light-border-color;
+    box-shadow: $card-box-shadow;
+    transition: $fast-transition;
+    text-decoration: none;
+    height: 100%;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 15px;
+
+  
+
+    &:hover {
+
+      .img-wrap img {
+        transform: scale(1.2);
+      }
+
+      .text-wrap p.cta {
+        color: $secondary-color !important;
+      }
+    }
+
+    .img-wrap {
+      height: 180px;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: $med-transition;
+      }
+    }
+
+    .content-wrap {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 15px;
+      padding: 24px 32px;
+      background-color: $white-color;
+      height: calc(100% - 180px);
+
+      @media (max-width: $screen-lg) {
+        padding: 24px;
+      }
+
+      .headline-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h6 {
+          color: $secondary-color;
+        }
+
+        .tags-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+
+          .tag {
+            font: 500 14px/1.2 $main-font;
+            color: $medium-blue-color;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background-color: #F3F7F9;
+          }
+        }
+      }
+
+      .text-wrap {
+        flex: 1;
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: $dark-color;
+
+          &.cta {
+            font: 600 16px/1.4 $main-font;
+            color: $main-color;
+            margin-top: auto;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

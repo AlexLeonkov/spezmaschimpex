@@ -1,0 +1,29 @@
+// Vars
+@import "vars/breakpoints";
+@import "vars/colors";
+@import "vars/typography";
+@import "vars/transitions";
+@import "vars/buttons";
+
+// Styles
+@import "blocks/general";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/partners";
+@import "blocks/services";
+@import "blocks/quote";
+@import "blocks/numbers";
+@import "blocks/reviews";
+@import "blocks/gallery";
+@import "blocks/blog";
+@import "blocks/faq";
+@import "blocks/certificates";
+@import "blocks/offer";
+@import "blocks/imprint";
+@import "blocks/policy";
+@import "blocks/footer";
+
+// Articles
+@import "blocks/article-hero";
+@import "blocks/article-content";
+
