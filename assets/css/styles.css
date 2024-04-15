@@ -229,6 +229,36 @@ main {
   }
 }
 
+#cookieConsentB {
+  z-index: 1000;
+}
+
+#cookieConsentBanner button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white; /* Text color */
+}
+
+#acceptCookies {
+  background-color: #4392C7; /* Blue background */
+}
+
+#acceptCookies:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#declineCookies {
+  background-color: #6c757d; /* Gray background */
+}
+
+#declineCookies:hover {
+  background-color: #545b62; /* Darker gray on hover */
+}
+
 header {
   position: fixed;
   width: 100%;
