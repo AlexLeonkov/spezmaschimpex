@@ -1567,6 +1567,7 @@ footer .copyright-wrap p {
   margin-top: 70px;
   width: 85%;
   margin: 0 auto;
+  display: none;
 }
 @media (max-width: 992px) {
   .angebote-section {
@@ -1574,6 +1575,7 @@ footer .copyright-wrap p {
     margin-top: -65px;
     margin-bottom: -65px;
     width: 100%;
+    display: block;
   }
 }
 .angebote-section .swiper-wrap {
