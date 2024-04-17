@@ -70,34 +70,40 @@ h5 {
 }
 
 h6 {
-  font: 500 20px/1.2 "Rubik", sans-serif;
+  font: 500 22px/1.2 "Rubik", sans-serif;
 }
 @media (max-width: 1200px) {
   h6 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 @media (max-width: 992px) {
   h6 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
 p {
-  font: 400 16px/1.4 "Manrope", sans-serif;
+  font: 400 18px/1.4 "Manrope", sans-serif;
 }
 @media (max-width: 992px) {
   p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
 .btn-main {
-  font: 600 16px/1 "Manrope", sans-serif;
+  font: 600 18px/1 "Manrope", sans-serif;
   color: #262626;
   border: 1px solid #6685A3;
   border-radius: 50px;
@@ -112,7 +118,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 992px) {
   .btn-main {
-    font-size: 14px;
+    font-size: 20px;
     padding: 11px 24px;
   }
 }
@@ -134,12 +140,12 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #3177a6;
 }
 .btn-main.btn-medium {
-  font-size: 18px;
+  font-size: 20px;
   padding: 18px 48px;
 }
 @media (max-width: 992px) {
   .btn-main.btn-medium {
-    font-size: 16px;
+    font-size: 18px;
     padding: 14px 32px;
   }
 }
@@ -351,7 +357,7 @@ header .navbar .navbar-nav {
   }
 }
 header .navbar .navbar-nav .nav-item .nav-link {
-  font: 500 16px/1 "Manrope", sans-serif;
+  font: 500 18px/1 "Manrope", sans-serif;
   color: #000000;
   padding: 0;
   position: relative;
@@ -359,7 +365,7 @@ header .navbar .navbar-nav .nav-item .nav-link {
 }
 @media (max-width: 992px) {
   header .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 header .navbar .navbar-nav .nav-item .nav-link:hover {
@@ -494,18 +500,18 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 }
 .hero-section .container .text-wrap p {
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 20px;
   max-width: 450px;
   margin: 0 0 30px;
 }
 @media (max-width: 1200px) {
   .hero-section .container .text-wrap p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (max-width: 992px) {
   .hero-section .container .text-wrap p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -596,6 +602,20 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   flex-wrap: wrap;
   gap: 20px;
 }
+.services-section .items-wrap h5 {
+  font-size: 28px;
+  color: #6685A3;
+}
+@media (max-width: 1200px) {
+  .services-section .items-wrap h5 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 992px) {
+  .services-section .items-wrap h5 {
+    font-size: 24px;
+  }
+}
 @media (max-width: 992px) {
   .services-section .items-wrap {
     flex-wrap: wrap;
@@ -611,6 +631,9 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   flex-direction: column;
   gap: 20px;
   flex: 2;
+}
+.services-section .items-wrap .small-wrap .item p {
+  font-size: 18px;
 }
 @media (max-width: 992px) {
   .services-section .items-wrap .small-wrap {
@@ -637,27 +660,13 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
     padding: 30px 20px 0;
   }
 }
-.services-section .items-wrap .large-wrap .item h5 {
-  font-size: 28px;
-  color: #6685A3;
-}
-@media (max-width: 1200px) {
-  .services-section .items-wrap .large-wrap .item h5 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 992px) {
-  .services-section .items-wrap .large-wrap .item h5 {
-    font-size: 20px;
-  }
-}
 .services-section .items-wrap .large-wrap .item p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 @media (max-width: 1200px) {
   .services-section .items-wrap .large-wrap .item p {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 }
@@ -688,6 +697,10 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   border: 1px solid #F5F5F5;
   box-shadow: 0 0 50px 0 rgba(4, 33, 61, 0.03);
   transition: 0.3s all ease-in-out;
+}
+.services-section .items-wrap .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 992px) {
   .services-section .items-wrap .item {
@@ -753,6 +766,7 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 @media (max-width: 992px) {
   .quote-section .quote-wrap h4 {
     margin: 0 0 15px;
+    font-size: 22px;
   }
 }
 .quote-section .quote-wrap h4 span {
@@ -781,12 +795,17 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   line-height: 1;
   margin: 0 0 6px;
 }
+@media (max-width: 1200px) {
+  .quote-section .quote-wrap .author-wrap .text-wrap h6 {
+    font-size: 22px;
+  }
+}
 .quote-section .quote-wrap .author-wrap .text-wrap p {
   font: 500 16px/1 "Manrope", sans-serif;
 }
 @media (max-width: 1200px) {
   .quote-section .quote-wrap .author-wrap .text-wrap p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 .quote-section .description-wrap p {
@@ -794,12 +813,12 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 }
 @media (max-width: 1200px) {
   .quote-section .description-wrap p {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media (max-width: 992px) {
   .quote-section .description-wrap p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -1517,12 +1536,21 @@ footer .contacts-wrap {
   flex-direction: column;
   gap: 15px;
 }
+footer .contacts-wrap .item {
+  padding: 10px 0;
+}
 footer .contacts-wrap .item p {
   color: #FFFFFF;
+  font: 400 16px/1 "Manrope", sans-serif;
+  margin-bottom: 10px;
+}
+footer .contacts-wrap .item p:last-child {
+  margin-bottom: 0;
 }
 footer .contacts-wrap .item p a {
   color: #FFFFFF;
   text-decoration: none;
+  font: 400 16px/1 "Manrope", sans-serif;
 }
 footer .contacts-wrap .item p a:hover {
   color: #4392C7;

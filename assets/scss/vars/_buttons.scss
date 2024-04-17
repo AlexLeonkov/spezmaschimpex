@@ -1,5 +1,5 @@
 .btn-main {
-  font: 600 16px/1 $main-font;
+  font: 600 18px/1 $main-font;
   color: $dark-color;
   border: 1px solid $medium-blue-color;
   border-radius: 50px;
@@ -13,7 +13,7 @@
   transition: $fast-transition;
 
   @media (max-width: $screen-md) {
-    font-size: 14px;
+    font-size: 20px;
     padding: 11px 24px;
   }
 
@@ -39,11 +39,11 @@
   }
 
   &.btn-medium {
-    font-size: 18px;
+    font-size: 20px;
     padding: 18px 48px;
 
     @media (max-width: $screen-md) {
-      font-size: 16px;
+      font-size: 18px;
       padding: 14px 32px;
     }
 

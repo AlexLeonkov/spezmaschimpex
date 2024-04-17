@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap");
 
-$main-font: 'Manrope', sans-serif;
-$headline-font: 'Rubik', sans-serif;
+$main-font: "Manrope", sans-serif;
+$headline-font: "Rubik", sans-serif;
 
 h1 {
   font: 600 48px/1.1 $headline-font;
@@ -64,25 +64,33 @@ h5 {
 }
 
 h6 {
-  font: 500 20px/1.2 $headline-font;
+  font: 500 22px/1.2 $headline-font;
 
   @media (max-width: $screen-lg) {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   @media (max-width: $screen-md) {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
 p {
-  font: 400 16px/1.4 $main-font;
+  font: 400 18px/1.4 $main-font;
+
+  // font: 400 40px/1.4 $main-font;
 
   @media (max-width: $screen-md) {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }

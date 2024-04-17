@@ -53,6 +53,9 @@ footer {
         &:hover {
           color: $main-color;
         }
+
+        @media (max-width: $screen-md) {
+        }
       }
     }
   }
@@ -70,15 +73,27 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
+    
     .item {
 
+      padding: 10px 0;
+
+      
       p {
         color: $white-color;
+        font: 400 16px/1 $main-font;
+        margin-bottom: 10px;
+
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
 
         a {
           color: $white-color;
           text-decoration: none;
+          font: 400 16px/1 $main-font;
 
           &:hover {
             color: $main-color;
