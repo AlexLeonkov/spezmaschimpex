@@ -1,0 +1,47 @@
+body.orange-color {
+  .hero-section .text-wrap span {
+    color: $main-elektro-color;
+  }
+
+  .services-section .items-wrap .large-wrap .item {
+    border-color: darkred;
+  }
+
+  .btn-main {
+    color: $dark-color;
+    border: 1px solid orange;
+
+    &:hover {
+      color: $white-color;
+      background-color: $main-elektro-color;
+    }
+
+    &.btn-color {
+      color: $white-color;
+      background-color: orange;
+      border: 1px solid orange;
+
+      &:hover {
+        color: $white-color;
+        border-color: darken($main-color, 10%);
+        background-color: darken($main-color, 10%);
+      }
+    }
+
+    &.btn-with-icon {
+      .btn-icon {
+        background-color: orange;
+      }
+    }
+
+    &.btn-small-with-icon {
+      color: $white-color;
+      border-color: $main-elektro-color;
+      background-color: $main-elektro-color;
+    }
+  }
+
+  footer {
+    background-color: $main-elektro-color;
+  }
+}
