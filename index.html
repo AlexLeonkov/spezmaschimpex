@@ -396,11 +396,13 @@
                         alt="Icon"
                       />
                     </div>
+
+                    <!-- <a href="/elektro.html" class="cta">Mehr lesen</a> -->
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-12">
+            <!-- <div class="col-12">
               <div class="services-cta-wrap">
                 <a
                   href="form.html"
@@ -410,70 +412,86 @@
                   <span class="btn-text">Beratung Vereinbaren</span>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
 
-      <!-- todo help to fix all -->
-      <section id="angebote" class="angebote-section">
-        <!--<div class="bg-wrap">-->
-        <!--    <video playsinline autoplay loop muted>-->
-        <!--        <source src="./assets/img/hero-bg.mp4" type="video/mp4"/>-->
-        <!--    </video>-->
-        <!--</div>-->
 
-        <!-- <div class="container">
+      <!-- Angebote Section -->
+      <section id="angebote" class="angebote-section">
+        <div class="container">
           <div class="row">
-            <div class="col-12"> -->
-        <div class="swiper-wrap">
-          <div class="swiper hero-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/img/offer/8kwp.png" alt="Slide" />
+            <div class="col-12">
+              <!-- Swiper Section -->
+              <div class="swiper offers-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="img-wrap">
+                      <picture>
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="./assets/img/offer/8kwp_mob.png"
+                        />
+                        <img
+                          src="./assets/img/offer/8kwp_web.png"
+                          alt="8 kWp Offer"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="img-wrap">
+                      <picture>
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="./assets/img/offer/10kwp_mob.png"
+                        />
+                        <img
+                          src="./assets/img/offer/10kwp_web.png"
+                          alt="10 kWp Offer"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div class="img-wrap">
+                      <picture>
+                        <source
+                          media="(max-width: 768px)"
+                          srcset="./assets/img/offer/15kwp_mob.png"
+                        />
+                        <img
+                          src="./assets/img/offer/15kwp_web.png"
+                          alt="15 kWp Offer"
+                        />
+                      </picture>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/img/offer/10kwp.png" alt="Slide" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="img-wrap">
-                  <img src="./assets/img/offer/15kwp.png" alt="Slide" />
-                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </div>
-        <!-- </div>
+
+        <div class="col-12">
+          <div class="offers-cta-wrap">
+            <a
+              href="form.html"
+              data-id="angebot-btn"
+              class="btn-main btn-color btn-medium btn-preis"
+            >
+              <span class="btn-text">Beratung Vereinbaren</span>
+            </a>
           </div>
-        </div> -->
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-12 col-xl-6">
-              <div class="text-wrap">
-                <h1>
-                  Entdecken Sie<br />
-                  Photovoltaik-Systeme<br />
-                  von <span>Spezmaschimpex</span>
-                </h1>
-                <p>
-                  Maßgeschneiderte Lösungen für grüne Energie vom eigenen Dach:
-                  Wir machen Ihr Zuhause zum Kraftwerk der Zukunft!
-                </p>
-                <a
-                  href="form.html"
-                  data-id="angebot-btn"
-                  class="btn-main btn-color btn-medium"
-                  >Unverbindliche Beratung anfordern</a
-                >
-              </div>
-            </div>
-          </div>
-        </div> -->
+        </div>
       </section>
 
       <section id="quote" class="quote-section">
@@ -542,6 +560,7 @@
           </div>
         </div>
       </section>
+
       <section id="reviews" class="reviews-section">
         <div class="container">
           <div class="row">

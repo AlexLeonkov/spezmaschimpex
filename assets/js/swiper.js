@@ -10,6 +10,9 @@ let heroSwiper = new Swiper(".hero-swiper", {
     },
 });
 
+
+
+
 let partnersSwiper = new Swiper(".partners-swiper", {
     slidesPerView: 6,
     spaceBetween: 20,
@@ -38,6 +41,23 @@ let partnersSwiper = new Swiper(".partners-swiper", {
             watchSlidesProgress: true,
         },
     }
+});
+
+
+
+let offerSwiper = new Swiper(".offers-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: "fade",
+    watchSlidesProgress: true,
+    autoplay: {
+        delay: 4000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+  
 });
 
 let reviewsSwiper = new Swiper(".reviews-swiper", {

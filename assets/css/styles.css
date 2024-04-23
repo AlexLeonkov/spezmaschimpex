@@ -1589,108 +1589,152 @@ footer .copyright-wrap p {
   color: #FFFFFF;
 }
 
-.angebote-section {
-  padding: 150px 0;
-  position: relative;
-  margin-top: 70px;
-  width: 85%;
-  margin: 0 auto;
-  display: none;
+.prices-section {
+  padding: 40px 0;
 }
 @media (max-width: 992px) {
-  .angebote-section {
-    padding: 120px 0;
-    margin-top: -65px;
-    margin-bottom: -65px;
+  .prices-section {
+    padding: 30px 0;
+  }
+}
+.prices-section .items-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  flex-direction: row;
+  padding-bottom: 60px;
+  flex: 3;
+}
+.prices-section .items-wrap .item p {
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .prices-section .items-wrap {
+    flex: 1.5;
+  }
+}
+.prices-section h5 {
+  font-size: 28px;
+  color: #6685A3;
+}
+@media (max-width: 1200px) {
+  .prices-section h5 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 992px) {
+  .prices-section h5 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .prices-section {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .prices-section {
+    flex-direction: column;
+  }
+}
+.prices-section .item {
+  flex: 1;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  font-family: "Manrope", sans-serif;
+  background: #d3e6f3;
+  background: linear-gradient(0deg, #d3e6f3 0%, rgba(0, 209, 251, 0) 69%);
+  transition: 0.3s all ease-in-out;
+}
+.prices-section .item ul {
+  padding: 44px 60px 0px;
+}
+.prices-section .item ul li {
+  color: #4392C7;
+  font-weight: 100;
+}
+.prices-section .item ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.prices-section .item ul li strong {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+}
+.prices-section .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 992px) {
+  .prices-section .item {
+    flex: auto;
+    padding: 30px 20px;
+    min-height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .prices-section .item {
     width: 100%;
   }
 }
-.angebote-section .swiper-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.prices-section .item * {
+  transition: 0.3s all ease-in-out;
 }
-.angebote-section .swiper-wrap .swiper {
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  position: relative;
+.prices-section .item .head {
+  background-color: #e7f1f8;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
 }
-.angebote-section .swiper-wrap .swiper .swiper-slide {
-  width: 100%;
-  height: 100%;
-}
-.angebote-section .swiper-wrap .swiper .swiper-slide .img-wrap {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-.angebote-section .swiper-wrap .swiper .swiper-slide .img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 15px;
-}
-@media (max-width: 992px) {
-  .angebote-section .swiper-wrap .swiper .swiper-slide .img-wrap img {
-    object-fit: contain;
-  }
-}
-.angebote-section .swiper-wrap .swiper .swiper-slide .img-wrap img::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.angebote-section .swiper-wrap .swiper .swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 48px;
-  position: relative;
-  z-index: 3;
-}
-@media (max-width: 992px) {
-  .angebote-section .swiper-wrap .swiper .swiper-pagination {
-    display: none;
-  }
-}
-.angebote-section .swiper-wrap .swiper .swiper-pagination-bullet {
-  background-color: #FFFFFF;
-}
-.angebote-section .container {
-  z-index: 1;
-  position: relative;
-}
-.angebote-section .container .text-wrap h1 {
-  color: #FFFFFF;
-  margin: 0 0 20px;
-}
-.angebote-section .container .text-wrap h1 span {
+.prices-section .item .head p {
+  font-size: 16px;
   color: #4392C7;
 }
-.angebote-section .container .text-wrap p {
-  color: #FFFFFF;
-  font-size: 18px;
-  max-width: 450px;
-  margin: 0 0 30px;
+.prices-section .item .head p:first-child {
+  text-align: center;
+  font-size: 30px;
 }
-@media (max-width: 1200px) {
-  .angebote-section .container .text-wrap p {
-    font-size: 16px;
-  }
+.prices-section .item .head p:last-child {
+  margin-top: -7px;
+}
+.prices-section .item .head p:last-child strong {
+  font-size: 42px;
+}
+.prices-section .item h5 {
+  color: #072E56;
+  margin: 0 0 15px;
 }
 @media (max-width: 992px) {
-  .angebote-section .container .text-wrap p {
-    font-size: 14px;
+  .prices-section .item h5 {
+    margin: 0 0 10px;
+  }
+}
+.prices-section .item p {
+  font-size: 14px;
+  color: #262626;
+}
+.prices-section .item span {
+  font-size: 17px !important;
+}
+.prices-section .item .prices-cta-wrap {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.services-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 60px;
+}
+.services-cta-wrap .btn-preis {
+  padding: 17px 0px !important;
+}
+@media (max-width: 992px) {
+  .services-cta-wrap {
+    margin: 20px 0 0;
   }
 }
 
@@ -1886,40 +1930,4 @@ footer .copyright-wrap p {
   .article-cta-section h3 {
     margin-bottom: 18px;
   }
-}
-
-body.orange-color .hero-section .text-wrap span {
-  color: orange;
-}
-body.orange-color .services-section .items-wrap .large-wrap .item {
-  border-color: darkred;
-}
-body.orange-color .btn-main {
-  color: #262626;
-  border: 1px solid orange;
-}
-body.orange-color .btn-main:hover {
-  color: #FFFFFF;
-  background-color: orange;
-}
-body.orange-color .btn-main.btn-color {
-  color: #FFFFFF;
-  background-color: orange;
-  border: 1px solid orange;
-}
-body.orange-color .btn-main.btn-color:hover {
-  color: #FFFFFF;
-  border-color: #3177a6;
-  background-color: #3177a6;
-}
-body.orange-color .btn-main.btn-with-icon .btn-icon {
-  background-color: orange;
-}
-body.orange-color .btn-main.btn-small-with-icon {
-  color: #FFFFFF;
-  border-color: orange;
-  background-color: orange;
-}
-body.orange-color footer {
-  background-color: orange;
 }
