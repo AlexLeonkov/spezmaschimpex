@@ -1,6 +1,9 @@
 .offer-section {
-  margin: 140px 0 60px;
+  // margin: 140px 0 60px;
 
+  .privacy-policy-label {
+    font: 600 12px/1.1 $main-font;
+  }
   @media (max-width: $screen-md) {
     margin: 100px 0 40px;
   }
@@ -39,7 +42,6 @@
       }
 
       .form-group {
-
         label {
           font: 400 14px/1.2 $main-font;
           margin: 0 0 6px;
@@ -51,14 +53,14 @@
           padding: 6px 16px;
           border-radius: 12px;
           box-shadow: none;
-          background-color: rgba($main-color, .1);
+          background-color: rgba($main-color, 0.1);
 
           @media (max-width: $screen-md) {
             height: 40px;
           }
 
           &:focus {
-            background-color: rgba($main-color, .2);
+            background-color: rgba($main-color, 0.2);
           }
         }
       }

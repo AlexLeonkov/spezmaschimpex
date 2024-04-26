@@ -1,0 +1,31 @@
+.form-section-html {
+    padding: 40px 0;
+    background-color: rgba($main-color, .05);
+
+    &:target {
+        scroll-margin-top: 100px; // Adjust this value based on the height of your fixed header
+      }
+
+  .points {
+    margin-top: 30px;
+
+    .point {
+      display: flex;
+
+      p{
+        font-size: 14px;
+      }
+     
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 435x;
+        height: 35px;
+        margin-right: 15px;
+      }
+    }
+  }
+}

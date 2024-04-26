@@ -4,7 +4,7 @@ $main-font: "Manrope", sans-serif;
 $headline-font: "Rubik", sans-serif;
 
 h1 {
-  font: 600 48px/1.1 $headline-font;
+  font: 600 48px/1.1 $headline-font;  
 
   @media (max-width: $screen-lg) {
     font-size: 40px;

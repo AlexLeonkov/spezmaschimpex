@@ -30,6 +30,7 @@
     color: $white-color;
     background-color: $main-color;
     border: 1px solid $main-color;
+    margin: 0 !important;
 
     &:hover {
       color: $white-color;
@@ -57,6 +58,10 @@
     align-items: center;
     gap: 9px;
     padding: 5px 5px 5px 16px;
+
+    &:hover {
+      background-color: #6685a3 !important;
+    }
 
     .btn-icon {
       width: 32px;
