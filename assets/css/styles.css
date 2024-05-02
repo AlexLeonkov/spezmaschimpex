@@ -1972,6 +1972,9 @@ body.orange-color .offer-section h3 {
 body.orange-color .offer-section form {
   border-color: rgb(56, 32, 6);
 }
+body.orange-color .offer-section .form-wrap {
+  padding: 100px;
+}
 body.orange-color .offer-section .form-wrap form .form-group input {
   background-color: rgba(250, 246, 239, 0.82);
 }
@@ -2026,6 +2029,9 @@ body.orange-color .btn-main.btn-color:hover {
 }
 body.orange-color .btn-main.btn-with-icon .btn-icon {
   background-color: orange;
+}
+body.orange-color .btn-main.btn-with-icon:hover {
+  background-color: orange !important;
 }
 body.orange-color .btn-main.btn-small-with-icon {
   color: #FFFFFF;

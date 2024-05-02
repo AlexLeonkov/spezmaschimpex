@@ -13,6 +13,9 @@ body.orange-color {
     }
 
     .form-wrap {
+
+
+      padding: 100px;
       form {
         .form-group {
           input {
@@ -59,6 +62,7 @@ body.orange-color {
   .services-section .items-wrap .large-wrap .item {
     border-color: rgb(56, 32, 6);
   }
+  
 
   .btn-main {
     color: $dark-color;
@@ -84,6 +88,10 @@ body.orange-color {
     &.btn-with-icon {
       .btn-icon {
         background-color: orange;
+      }
+
+      &:hover {
+       background-color: $main-elektro-color!important;
       }
     }
 

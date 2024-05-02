@@ -1,7 +1,6 @@
 .services-section {
   padding: 40px 0;
-  background-color: rgba($main-color, .05);
-
+  background-color: rgba($main-color, 0.05);
 
   @media (max-width: $screen-md) {
     padding: 30px 0;
@@ -39,8 +38,8 @@
       gap: 20px;
       flex: 2;
 
-      .item p{
-     font-size: 18px;
+      .item p {
+        font-size: 18px;
       }
 
       @media (max-width: $screen-md) {
@@ -51,23 +50,22 @@
     .large-wrap {
       flex: 1;
 
+
       .item {
         display: flex;
         flex-direction: column;
         height: 100%;
         padding: 40px 40px 0;
         border: 2px solid $medium-blue-color;
+      
 
         @media (max-width: $screen-lg) {
           padding: 30px 30px 0;
-
         }
 
         @media (max-width: $screen-md) {
           padding: 30px 20px 0;
         }
-
-      
 
         p {
           font-size: 18px;
