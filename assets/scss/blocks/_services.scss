@@ -1,9 +1,9 @@
 .services-section {
-  padding: 40px 0;
+  padding: 60px 0;
   background-color: rgba($main-color, 0.05);
 
   @media (max-width: $screen-md) {
-    padding: 30px 0;
+    padding: 40px 0;
   }
 
   .items-wrap {
@@ -50,14 +50,13 @@
     .large-wrap {
       flex: 1;
 
-
       .item {
         display: flex;
         flex-direction: column;
         height: 100%;
         padding: 40px 40px 0;
         border: 2px solid $medium-blue-color;
-      
+
 
         @media (max-width: $screen-lg) {
           padding: 30px 30px 0;
@@ -75,11 +74,20 @@
             font-size: 18px;
             margin-bottom: 20px;
           }
+
+          a {
+            color: $main-color;
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
         }
 
         .icon-wrap {
           width: 100%;
           display: flex;
+          margin-top: auto;
           justify-content: flex-end;
 
           @media (max-width: $screen-lg) {
@@ -109,7 +117,7 @@
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: $card-hover-box-shadow;
       }
 
       @media (max-width: $screen-md) {

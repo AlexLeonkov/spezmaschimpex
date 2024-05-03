@@ -1,5 +1,5 @@
 .btn-main {
-  font: 600 18px/1 $main-font;
+  font: 500 18px/1 $main-font;
   color: $dark-color;
   border: 1px solid $medium-blue-color;
   border-radius: 50px;
@@ -13,7 +13,7 @@
   transition: $fast-transition;
 
   @media (max-width: $screen-md) {
-    font-size: 20px;
+    font-size: 16px;
     padding: 11px 24px;
   }
 
@@ -34,17 +34,16 @@
 
     &:hover {
       color: $white-color;
-      border-color: darken($main-color, 10%);
-      background-color: darken($main-color, 10%);
+      border-color: darken($main-color, 20%);
+      background-color: darken($main-color, 20%);
     }
   }
 
   &.btn-medium {
-    font-size: 20px;
-    padding: 18px 48px;
+    font-size: 18px;
+    padding: 18px 32px;
 
     @media (max-width: $screen-md) {
-      font-size: 18px;
       padding: 14px 32px;
     }
 
@@ -56,11 +55,12 @@
   &.btn-with-icon {
     display: flex;
     align-items: center;
-    gap: 9px;
-    padding: 5px 5px 5px 16px;
+    gap: 10px;
+    padding: 8px 8px 8px 16px;
 
     &:hover {
-      background-color: #6685a3 !important;
+      border-color: $medium-blue-color !important;
+      background-color: $medium-blue-color !important;
     }
 
     .btn-icon {

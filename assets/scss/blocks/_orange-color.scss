@@ -3,6 +3,7 @@ body.orange-color {
   .services-section {
     background-color: $background-color-elektro;
   }
+
   .offer-section {
     h3 {
       color: $primary-color;
@@ -16,6 +17,7 @@ body.orange-color {
 
 
       padding: 100px;
+
       form {
         .form-group {
           input {
@@ -25,6 +27,7 @@ body.orange-color {
       }
     }
   }
+
   header .navbar .navbar-nav .nav-item .nav-link {
     color: rgb(56, 32, 6);
 
@@ -53,8 +56,9 @@ body.orange-color {
   }
 
   .lamp-icon {
-    width: 40px;
+    width: 36px;
   }
+
   .hero-section .text-wrap span {
     color: $main-elektro-color;
   }
@@ -62,7 +66,7 @@ body.orange-color {
   .services-section .items-wrap .large-wrap .item {
     border-color: rgb(56, 32, 6);
   }
-  
+
 
   .btn-main {
     color: $dark-color;
@@ -91,7 +95,7 @@ body.orange-color {
       }
 
       &:hover {
-       background-color: $main-elektro-color!important;
+        background-color: $main-elektro-color !important;
       }
     }
 
@@ -107,10 +111,12 @@ body.orange-color {
       text-decoration: none;
       color: $main-elektro-color;
     }
+
     p {
       color: #140b00;
     }
   }
+
   footer {
     background-color: rgb(207, 134, 45);
 

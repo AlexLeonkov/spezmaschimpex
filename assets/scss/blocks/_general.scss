@@ -3,6 +3,7 @@
 }
 
 body {
+  font-family: $main-font;
   overflow-x: hidden;
   background-color: $light-body-bg-color;
 }
@@ -15,8 +16,12 @@ body {
     padding-right: 0 !important;
   }
 
-  @media (min-width: $screen-xxl) {
+  @media (min-width: $screen-xl) {
     max-width: 1300px;
+  }
+
+  @media (min-width: $screen-xxl) {
+    max-width: 1400px;
   }
 
   @media (max-width: $screen-lg) {
@@ -54,8 +59,7 @@ main {
 
 // cookies consent
 
-#cookieConsentB
-{
+#cookieConsentB {
   z-index: 1000;
 }
 
@@ -68,7 +72,7 @@ main {
   cursor: pointer;
   transition: background-color 0.3s;
   color: white; /* Text color */
-  
+
 }
 
 #acceptCookies {

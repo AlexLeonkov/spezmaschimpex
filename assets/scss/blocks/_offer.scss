@@ -1,11 +1,7 @@
 .offer-section {
-  // margin: 140px 0 60px;
 
-  .privacy-policy-label {
-    font: 600 12px/1.1 $main-font;
-  }
-  @media (max-width: $screen-md) {
-    margin: 100px 0 40px;
+  @media (max-width: $screen-sm) {
+    margin-top: 24px;
   }
 
   .form-wrap {
@@ -13,15 +9,21 @@
     align-items: center;
     justify-content: center;
 
+    * {
+      transition: $fast-transition;
+    }
+
     form {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
       width: 100%;
-      max-width: 615px;
+      border: 0;
+      max-width: 100%;
       padding: 32px 40px;
       border-radius: 24px;
-      border: 1px solid $secondary-color;
+      background-color: $white-color;
+      box-shadow: $card-box-shadow;
 
       @media (max-width: $screen-md) {
         gap: 16px;
@@ -32,16 +34,45 @@
         padding: 24px;
       }
 
-      h3 {
+      h2, h3 {
+        font: 600 36px/1 $headline-font;
         color: $secondary-color;
-        margin: 0 0 10px;
+        margin-bottom: 20px;
 
-        @media (max-width: $screen-sm) {
+        @media (max-width: $screen-md) {
+          font-size: 28px;
+        }
+      }
+
+      h3 {
+        margin-bottom: 4px;
+      }
+
+      .button_group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        button {
+          font: 500 16px/1 $main-font;
+          border-radius: 50px;
+          padding: 11px 32px;
           margin: 0;
+          height: 48px;
+          color: $dark-color;
+          background-color: transparent;
+          border: 1px solid $secondary-color;
+
+          &:hover {
+            background-color: rgba($secondary-color, .1);
+          }
         }
       }
 
       .form-group {
+        margin: 0;
+        padding: 0;
+
         label {
           font: 400 14px/1.2 $main-font;
           margin: 0 0 6px;
@@ -50,19 +81,42 @@
         input {
           border: 0;
           height: 48px;
-          padding: 6px 16px;
-          border-radius: 12px;
+          padding: 6px 12px;
+          border-radius: 10px;
           box-shadow: none;
-          background-color: rgba($main-color, 0.1);
+          color: $dark-color;
+          background-color: rgba($main-color, 0.05);
 
-          @media (max-width: $screen-md) {
-            height: 40px;
+          &::placeholder {
+            opacity: 1 !important;
+            color: rgba($dark-color, .5) !important;
           }
 
           &:focus {
-            background-color: rgba($main-color, 0.2);
+            background-color: rgba($main-color, 0.1);
           }
         }
+      }
+    }
+
+    .btn-back {
+      font: 500 16px/1 $main-font;
+      color: $dark-color;
+      border-radius: 50px;
+      padding: 11px 32px;
+      max-width: max-content;
+      background-color: rgba($secondary-color, .1);
+
+      &:hover {
+        background-color: rgba($secondary-color, .2);
+      }
+    }
+
+    .privacy-policy-label {
+      font: 600 12px/1.1 $main-font;
+
+      a {
+        color: $main-color;
       }
     }
   }

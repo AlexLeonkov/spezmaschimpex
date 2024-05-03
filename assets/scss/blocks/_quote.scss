@@ -1,8 +1,9 @@
 .quote-section {
-  padding: 40px 0;
+  padding: 80px 0;
+  background-color: rgba($main-color, .05);
 
   @media (max-width: $screen-md) {
-    padding: 30px 0;
+    padding: 60px 0;
   }
 
   .quote-wrap {
