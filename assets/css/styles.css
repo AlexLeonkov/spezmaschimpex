@@ -2009,7 +2009,8 @@ footer .copyright-wrap p {
     padding: 24px;
   }
 }
-.article-content-section .text-with-bg-wrap p span {
+.article-content-section .text-with-bg-wrap p span, .article-content-section .text-with-bg-wrap a {
+  display: inline;
   color: #6685A3;
   font-weight: 700;
 }

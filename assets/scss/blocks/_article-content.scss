@@ -88,7 +88,8 @@
       padding: 24px;
     }
 
-    p span {
+    p span, a {
+      display: inline;
       color: $medium-blue-color;
       font-weight: 700;
     }
