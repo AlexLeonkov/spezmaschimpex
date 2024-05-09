@@ -1,6 +1,5 @@
 .form-section {
   padding: 80px 0;
-  background-color: rgba($main-color, .05);
 
   @media (max-width: $screen-md) {
     padding: 60px 0;
@@ -18,7 +17,7 @@
 
     .point {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 12px;
 
       img {

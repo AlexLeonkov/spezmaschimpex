@@ -54,20 +54,13 @@
         }
 
         h5 {
+          font: 600 24px/1 $headline-font;
           color: rgba($secondary-color, .8);
         }
 
         p span {
           font: 600 40px/1.2 $headline-font;
           color: $main-color;
-
-          @media (max-width: $screen-lg) {
-            font-size: 24px;
-          }
-
-          @media (max-width: $screen-md) {
-            font-size: 20px;
-          }
         }
       }
 
@@ -75,7 +68,7 @@
         padding: 48px;
 
         @media (max-width: $screen-md) {
-          padding: 36px 24px;
+          padding: 32px;
         }
 
         ul {
@@ -103,7 +96,7 @@
       }
 
       .prices-cta-wrap {
-        padding: 0 24px 24px;
+        padding: 0 24px 32px;
         display: flex;
         justify-content: center;
       }

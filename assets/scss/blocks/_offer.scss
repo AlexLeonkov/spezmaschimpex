@@ -69,6 +69,16 @@
         }
       }
 
+      .btn-color {
+        color: $white-color;
+        box-shadow: none !important;
+
+        &:disabled {
+          opacity: .5;
+          cursor: initial;
+        }
+      }
+
       .form-group {
         margin: 0;
         padding: 0;
