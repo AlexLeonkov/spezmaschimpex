@@ -56,37 +56,62 @@ main {
   }
 }
 
-
-// cookies consent
-
-#cookieConsentB {
+.cookies-banner-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  color: $white-color;
+  background: $black-color;
   z-index: 1000;
+
+  &.hidden {
+    display: none !important;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: $fast-transition;
+    color: $white-color;
+  }
+
+  .btn-accept-cookies {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: darken($main-color, 10%);
+    }
+  }
+
+  .btn-decline-cookies {
+    background-color: #6c757d;
+
+    &:hover {
+      background-color: #545b62;
+    }
+  }
 }
 
+.animation {
+  transition: opacity .5s ease-out, transform .5s ease-out !important;
+  height: max-content;
 
-#cookieConsentBanner button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  color: white; /* Text color */
-
-}
-
-#acceptCookies {
-  background-color: #4392C7;; /* Blue background */
-}
-
-#acceptCookies:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-#declineCookies {
-  background-color: #6c757d; /* Gray background */
-}
-
-#declineCookies:hover {
-  background-color: #545b62; /* Darker gray on hover */
+  &:not(.animation-active) {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
 }

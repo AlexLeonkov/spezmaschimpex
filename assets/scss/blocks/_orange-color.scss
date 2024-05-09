@@ -1,4 +1,5 @@
 body.orange-color {
+
   .reviews-section,
   .services-section {
     background-color: $background-color-elektro;
@@ -14,8 +15,6 @@ body.orange-color {
     }
 
     .form-wrap {
-
-
       padding: 100px;
 
       form {
@@ -74,18 +73,22 @@ body.orange-color {
 
     &:hover {
       color: $white-color;
+      border-color: orange !important;
       background-color: $main-elektro-color;
     }
 
     &.btn-color {
       color: $white-color;
-      background-color: orange;
-      border: 1px solid orange;
+      background: orange !important;
+      border: none;
+
+      &::before {
+        display: none;
+      }
 
       &:hover {
         color: $white-color;
-        border-color: darken($main-elektro-color, 10%);
-        background-color: darken($main-elektro-color, 10%);
+        background: darken($main-elektro-color, 10%) !important;
       }
     }
 
@@ -107,7 +110,8 @@ body.orange-color {
   }
 
   .faq-section {
-    a {
+
+    a:not(.btn-main) {
       text-decoration: none;
       color: $main-elektro-color;
     }
