@@ -17,6 +17,9 @@
       box-shadow: $card-box-shadow;
       transition: $fast-transition;
 
+      #collapse-4 p:not(:last-child) {
+        margin-bottom: 5px;
+      }
       .accordion-button {
         padding: 30px 40px;
         display: flex;
@@ -36,7 +39,6 @@
         }
 
         &:not(.collapsed) {
-
           h6 {
             color: $main-color;
           }
@@ -47,25 +49,22 @@
         }
 
         &.collapsed {
-
           h6 {
             color: $secondary-color;
           }
 
           img {
-            filter: brightness(.5);
+            filter: brightness(0.5);
           }
         }
 
         h6 {
-
           @media (max-width: $screen-lg) {
             padding-right: 20px;
           }
         }
 
         img {
-
           @media (max-width: $screen-lg) {
             max-width: 20px;
           }

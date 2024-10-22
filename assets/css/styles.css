@@ -1375,6 +1375,9 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   box-shadow: 0 0 50px 0 rgba(4, 33, 61, 0.03);
   transition: 0.15s all ease-in-out;
 }
+.faq-section .accordion .accordion-item #collapse-4 p:not(:last-child) {
+  margin-bottom: 5px;
+}
 .faq-section .accordion .accordion-item .accordion-button {
   padding: 30px 40px;
   display: flex;

@@ -36,4 +36,39 @@
       <priority>0.5</priority>
    </url>
 
+
+<url>
+    <loc>https://www.spezmaschimpex.de/elektro.html</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.spezmaschimpex.de/artilcles/investition-in-solarmodule.html</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.spezmaschimpex.de/artilcles/pv-anlage-mwst.html</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.spezmaschimpex.de/artilcles/referenz_zehlendorf.html</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.spezmaschimpex.de/artilcles/anmeldung-pv-anlage.html</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+
+
+
+
 </urlset>

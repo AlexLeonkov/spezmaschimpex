@@ -16,8 +16,8 @@ const animateNumbersSection = () => {
     }
 
     if (numbersSection.classList.contains('active')) {
-        animateValue(numOne, 0, 487, duration);
-        animateValue(numTwo, 0, 533, duration);
+        animateValue(numOne, 0, 562, duration);
+        animateValue(numTwo, 0, 613, duration);
         animateValue(numThree, 0, 3, time_duration);
         window.removeEventListener('scroll', animateNumbersSection, true);
     }
