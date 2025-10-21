@@ -227,6 +227,26 @@ main {
   overflow: hidden;
 }
 
+.section-bg-white {
+  background-color: #FFFFFF;
+}
+
+.section-bg-light-blue {
+  background-color: rgba(67, 146, 199, 0.05);
+}
+
+.section-bg-medium-blue {
+  background-color: rgba(67, 146, 199, 0.1);
+}
+
+.section-bg-dark-blue {
+  background-color: rgba(67, 146, 199, 0.15);
+}
+
+.section-bg-light {
+  background-color: #FCFCFC;
+}
+
 .headline-general {
   display: flex;
   align-items: center;
@@ -626,9 +646,126 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   max-width: 100%;
 }
 
+.heatpump-expert-section {
+  padding: 80px 0;
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section {
+    padding: 60px 0;
+  }
+}
+.heatpump-expert-section .content-wrap h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #072E56;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+@media (max-width: 1200px) {
+  .heatpump-expert-section .content-wrap h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .heatpump-expert-section .content-wrap h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+.heatpump-expert-section .content-wrap .features-list {
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap .features-list {
+    margin-bottom: 30px;
+  }
+}
+.heatpump-expert-section .content-wrap .features-list .feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap .features-list .feature-item {
+    margin-bottom: 15px;
+    gap: 12px;
+  }
+}
+.heatpump-expert-section .content-wrap .features-list .feature-item img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap .features-list .feature-item img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.heatpump-expert-section .content-wrap .features-list .feature-item span {
+  font-size: 18px;
+  color: #262626;
+  line-height: 1.5;
+  font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .heatpump-expert-section .content-wrap .features-list .feature-item span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap .features-list .feature-item span {
+    font-size: 16px;
+  }
+}
+.heatpump-expert-section .content-wrap .cta-wrap .btn-main {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .content-wrap .cta-wrap .btn-main {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+}
+.heatpump-expert-section .image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heatpump-expert-section .image-wrap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+.heatpump-expert-section .image-wrap img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1200px) {
+  .heatpump-expert-section .image-wrap {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .heatpump-expert-section .image-wrap {
+    margin-top: 30px;
+  }
+}
+
 .services-section {
   padding: 60px 0;
-  background-color: rgba(67, 146, 199, 0.05);
 }
 @media (max-width: 992px) {
   .services-section {
@@ -895,7 +1032,6 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 
 .reviews-section {
   padding: 80px 0 0;
-  background-color: rgba(67, 146, 199, 0.05);
 }
 @media (max-width: 992px) {
   .reviews-section {
@@ -1113,7 +1249,6 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 
 .benefits-section {
   padding: 80px 0;
-  background-color: rgba(67, 146, 199, 0.05);
 }
 @media (max-width: 992px) {
   .benefits-section {
@@ -1286,7 +1421,6 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
 
 .process-section {
   padding: 80px 0;
-  background-color: rgba(67, 146, 199, 0.05);
 }
 @media (max-width: 992px) {
   .process-section {

@@ -1,0 +1,122 @@
+.heatpump-expert-section {
+  padding: 80px 0;
+
+  @media (max-width: $screen-md) {
+    padding: 60px 0;
+  }
+
+  .content-wrap {
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: $secondary-color;
+      margin-bottom: 30px;
+      line-height: 1.2;
+
+      @media (max-width: $screen-lg) {
+        font-size: 36px;
+      }
+
+      @media (max-width: $screen-md) {
+        font-size: 32px;
+        margin-bottom: 25px;
+      }
+
+      @media (max-width: $screen-sm) {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .features-list {
+      margin-bottom: 40px;
+
+      @media (max-width: $screen-md) {
+        margin-bottom: 30px;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        gap: 15px;
+
+        @media (max-width: $screen-md) {
+          margin-bottom: 15px;
+          gap: 12px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          margin-top: 2px;
+
+          @media (max-width: $screen-md) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        span {
+          font-size: 18px;
+          color: $dark-color;
+          line-height: 1.5;
+          font-weight: 500;
+
+          @media (max-width: $screen-lg) {
+            font-size: 17px;
+          }
+
+          @media (max-width: $screen-md) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .cta-wrap {
+      .btn-main {
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: 600;
+
+        @media (max-width: $screen-md) {
+          padding: 12px 25px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .image-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: $med-transition;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    .image-wrap {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    .image-wrap {
+      margin-top: 30px;
+    }
+  }
+}

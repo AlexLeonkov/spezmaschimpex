@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-
   @media (min-width: $screen-lg) {
     max-width: 1170px;
     padding-left: 0 !important;
@@ -36,6 +35,27 @@ body {
 
 main {
   overflow: hidden;
+}
+
+// Section background utilities
+.section-bg-white {
+  background-color: $white-color;
+}
+
+.section-bg-light-blue {
+  background-color: rgba($main-color, 0.05);
+}
+
+.section-bg-medium-blue {
+  background-color: rgba($main-color, 0.1);
+}
+
+.section-bg-dark-blue {
+  background-color: rgba($main-color, 0.15);
+}
+
+.section-bg-light {
+  background-color: $light-body-bg-color;
 }
 
 .headline-general {
@@ -107,11 +127,10 @@ main {
 }
 
 .section-with-light-bg {
-
 }
 
 .animation {
-  transition: opacity .5s ease-out, transform .5s ease-out !important;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out !important;
   height: max-content;
 
   &:not(.animation-active) {
