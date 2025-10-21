@@ -807,6 +807,12 @@ header .navbar .navbar-actions .dropdown .dropdown-menu {
   gap: 20px;
   flex: 2;
 }
+.services-section .items-wrap .small-wrap .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: flex-start;
+}
 .services-section .items-wrap .small-wrap .item p {
   font-size: 18px;
 }

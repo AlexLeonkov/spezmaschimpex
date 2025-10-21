@@ -37,6 +37,14 @@
       gap: 20px;
       flex: 2;
 
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: flex-start;
+      }
+
       .item p {
         font-size: 18px;
       }
