@@ -17,9 +17,9 @@ const animateNumbersSection = () => {
   }
 
   if (numbersSection.classList.contains("active")) {
-    animateValue(numOne, 0, 950, duration);
-    animateValue(numTwo, 0, 1083, duration);
-    animateValue(numThree, 0, 4, time_duration);
+    animateValue(numOne, 0, 1120, duration);
+    animateValue(numTwo, 0, 1383, duration);
+    animateValue(numThree, 0, 20, time_duration);
     window.removeEventListener("scroll", animateNumbersSection, true);
   }
 };
