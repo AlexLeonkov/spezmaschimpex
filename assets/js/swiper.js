@@ -92,9 +92,17 @@ let gallerySwiper = new Swiper(".gallery-swiper", {
         fill: 'row',
     },
     spaceBetween: 20,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    speed: 900,
+    rewind: true,
+    grabCursor: true,
+    simulateTouch: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
     breakpoints: {
         0: {
