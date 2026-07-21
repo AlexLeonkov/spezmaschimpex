@@ -108,6 +108,9 @@
                 <a class="nav-link" href="#partners">Partner</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#smarthome">Smart Home</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#reviews">Bewertungen</a>
               </li>
               <li class="nav-item">
@@ -281,6 +284,12 @@
                       alt="Enpal Logo"
                     />
                   </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./assets/img/logos/loxone-logo.svg"
+                      alt="Loxone Silver Partner Logo"
+                    />
+                  </div>
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
@@ -326,6 +335,16 @@
                       Telekommunikation nach den aktuellen Sicherheitsstandards.
                     </p>
                   </div>
+                  <div class="item animation">
+                    <h5>Smart Home mit Loxone</h5>
+                    <p>
+                      Licht, Beschattung, Heizung, Sicherheit und Ihr
+                      Energiemanagement – zentral gesteuert über einen Loxone
+                      Miniserver. Wir verbinden Ihre Elektrik, PV-Anlage und
+                      Wärmepumpe zu einem intelligenten Zuhause aus einer Hand.
+                      <a href="#smarthome">Mehr erfahren</a>
+                    </p>
+                  </div>
                 </div>
                 <div class="large-wrap">
                   <div class="item item-large animation">
@@ -368,6 +387,603 @@
       </section>
 
 
+
+      <section id="smarthome" class="smarthome-section">
+        <style>
+          .smarthome-section {
+            padding: 70px 0;
+            --lox: #69c350;
+            --lox-dark: #4ea63a;
+          }
+          .smarthome-section .sh-intro {
+            max-width: 760px;
+            margin: -6px 0 34px;
+            font-size: 17px;
+            line-height: 1.6;
+            opacity: 0.85;
+          }
+          /* feature tiles */
+          .smarthome-section .sh-tiles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 46px;
+          }
+          @media (max-width: 991px) {
+            .smarthome-section .sh-tiles { grid-template-columns: repeat(2, 1fr); }
+          }
+          @media (max-width: 575px) {
+            .smarthome-section .sh-tiles { grid-template-columns: 1fr; }
+          }
+          .smarthome-section .sh-tile {
+            background: #fff;
+            border: 1px solid #e9edf1;
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+          }
+          .smarthome-section .sh-tile:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 34px rgba(20, 40, 60, 0.1);
+            border-color: var(--lox);
+          }
+          .smarthome-section .sh-tile .sh-ic {
+            font-size: 30px;
+            line-height: 1;
+            margin-bottom: 14px;
+          }
+          .smarthome-section .sh-tile h5 { font-size: 18px; margin-bottom: 8px; }
+          .smarthome-section .sh-tile p { font-size: 14.5px; line-height: 1.55; opacity: 0.8; margin: 0; }
+          .smarthome-section .sh-tile.is-accent {
+            background: linear-gradient(145deg, var(--lox), var(--lox-dark));
+            border-color: transparent;
+            color: #fff;
+          }
+          .smarthome-section .sh-tile.is-accent p { opacity: 0.95; }
+
+          /* interactive room demo */
+          .smarthome-section .sh-demo {
+            background: #f5f8fb;
+            border-radius: 22px;
+            padding: 26px;
+            margin-bottom: 40px;
+          }
+          .smarthome-section .sh-demo-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 20px;
+          }
+          .smarthome-section .sh-demo-head h4 { font-size: 20px; margin: 0; }
+          .smarthome-section .sh-live {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 13px; font-weight: 600; color: #5a6b78;
+          }
+          .smarthome-section .sh-live .sh-live-dot {
+            width: 8px; height: 8px; border-radius: 50%; background: var(--lox);
+            animation: sh-pulse 1.6s ease-in-out infinite;
+          }
+          @keyframes sh-pulse { 0%,100%{ box-shadow:0 0 0 0 rgba(105,195,80,.5);} 50%{ box-shadow:0 0 0 6px rgba(105,195,80,0);} }
+
+          .smarthome-section .sh-stage {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 20px;
+          }
+          @media (max-width: 800px) { .smarthome-section .sh-stage { grid-template-columns: 1fr; } }
+
+          /* room */
+          .smarthome-section .sh-room {
+            --bri: 1; --shade: 0;
+            position: relative;
+            min-height: 400px;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: background 0.8s ease;
+            background: linear-gradient(180deg, #cfe6ff 0%, #eaf6ff 55%, #dfeaf2 55%, #eef3f7 100%);
+          }
+          .smarthome-section .sh-room[data-sky="night"] {
+            background: linear-gradient(180deg, #10182b 0%, #1b2740 55%, #222a38 55%, #2b3444 100%);
+          }
+          .smarthome-section .sh-glow {
+            position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(60% 55% at 50% 12%, rgba(255,214,140,0.55) 0%, transparent 70%);
+            opacity: var(--bri);
+            transition: opacity 0.7s ease;
+          }
+          /* ceiling lamp */
+          .smarthome-section .sh-lamp {
+            position: absolute; top: 30px; left: 50%; transform: translateX(-50%);
+            width: 24px; height: 24px; border-radius: 50%;
+            background: radial-gradient(circle, #fff6d8 0%, #ffd98a 70%);
+            opacity: calc(0.12 + 0.88 * var(--bri));
+            box-shadow: 0 0 calc(30px + 46px * var(--bri)) calc(10px + 26px * var(--bri)) rgba(255,214,140, calc(0.85 * var(--bri)));
+            transition: opacity 0.6s ease, box-shadow 0.6s ease;
+          }
+          .smarthome-section .sh-lamp::before {
+            content: ""; position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+            width: 2px; height: 30px; background: rgba(120,120,120,0.5);
+          }
+          /* window + sky */
+          .smarthome-section .sh-window {
+            position: absolute; top: 74px; right: 40px;
+            width: 150px; height: 150px; border-radius: 8px;
+            border: 6px solid #eef2f5; overflow: hidden;
+            background: linear-gradient(180deg, #8ec9ff 0%, #cfeaff 100%);
+            box-shadow: 0 8px 22px rgba(10,30,50,0.18);
+          }
+          .smarthome-section .sh-room[data-sky="night"] .sh-window {
+            background: linear-gradient(180deg, #0b1430 0%, #1a2547 100%);
+            border-color: #2a3550;
+          }
+          .smarthome-section .sh-sun {
+            position: absolute; top: 18px; right: 20px; width: 30px; height: 30px; border-radius: 50%;
+            background: radial-gradient(circle, #fff3c4 0%, #ffd45e 75%);
+            box-shadow: 0 0 24px 6px rgba(255,212,94,0.7);
+            transition: opacity 0.6s ease;
+          }
+          .smarthome-section .sh-moon {
+            position: absolute; top: 18px; right: 22px; width: 24px; height: 24px; border-radius: 50%;
+            background: #eef1f6; box-shadow: inset -7px -3px 0 0 #cbd3de, 0 0 16px 3px rgba(220,230,245,0.5);
+            opacity: 0; transition: opacity 0.6s ease;
+          }
+          .smarthome-section .sh-stars {
+            position: absolute; inset: 0; opacity: 0; transition: opacity 0.6s ease;
+            background-image:
+              radial-gradient(1.5px 1.5px at 20% 30%, #fff 50%, transparent),
+              radial-gradient(1.5px 1.5px at 62% 18%, #fff 50%, transparent),
+              radial-gradient(1.5px 1.5px at 82% 44%, #fff 50%, transparent),
+              radial-gradient(1.5px 1.5px at 35% 58%, #fff 50%, transparent),
+              radial-gradient(1.5px 1.5px at 72% 70%, #fff 50%, transparent);
+          }
+          .smarthome-section .sh-room[data-sky="night"] .sh-sun { opacity: 0; }
+          .smarthome-section .sh-room[data-sky="night"] .sh-moon,
+          .smarthome-section .sh-room[data-sky="night"] .sh-stars { opacity: 1; }
+          /* roller shade */
+          .smarthome-section .sh-shade {
+            position: absolute; top: 0; left: 0; width: 100%;
+            height: calc(var(--shade) * 1%);
+            z-index: 3;
+            background: repeating-linear-gradient(180deg, #d0d5da 0 5px, #bcc2c8 5px 10px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+            transition: height 0.9s ease;
+          }
+          /* tv */
+          .smarthome-section .sh-tv {
+            position: absolute; left: 40px; top: 96px;
+            width: 150px; height: 92px; border-radius: 8px;
+            background: #10141c; border: 4px solid #05070b;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.28); overflow: hidden;
+          }
+          .smarthome-section .sh-tv::after {
+            content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity 0.5s ease;
+            background: linear-gradient(120deg, #ff5f6d, #ffc371, #47caff, #7366ff);
+            background-size: 300% 300%; animation: sh-tv 6s ease infinite;
+          }
+          .smarthome-section .sh-room.tv-on .sh-tv::after { opacity: 0.9; }
+          @keyframes sh-tv { 0%{background-position:0 50%} 50%{background-position:100% 50%} 100%{background-position:0 50%} }
+          .smarthome-section .sh-tv-stand {
+            position: absolute; left: 96px; top: 188px; width: 38px; height: 12px; border-radius: 0 0 4px 4px; background: #05070b;
+          }
+          /* floor, sofa, plant */
+          .smarthome-section .sh-floor { position:absolute; left:0; bottom:0; width:100%; height:96px; background: rgba(60,40,20,0.14); }
+          .smarthome-section .sh-room[data-sky="night"] .sh-floor { background: rgba(0,0,0,0.3); }
+          .smarthome-section .sh-sofa {
+            position: absolute; bottom: 30px; left: 46px; width: 150px; height: 50px;
+            border-radius: 14px 14px 6px 6px; background: #6b7b8a;
+            box-shadow: -22px 0 0 -8px #6b7b8a, 22px 0 0 -8px #6b7b8a;
+          }
+          .smarthome-section .sh-plant {
+            position: absolute; bottom: 30px; right: 40px; width: 26px; height: 40px;
+            background: #7d5a3c; border-radius: 0 0 6px 6px;
+          }
+          .smarthome-section .sh-plant::before {
+            content: ""; position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+            width: 46px; height: 46px; border-radius: 50% 50% 45% 45%;
+            background: radial-gradient(circle at 50% 70%, #3f9b52, #2f7d40);
+          }
+          /* badges */
+          .smarthome-section .sh-badges { position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; z-index: 4; }
+          .smarthome-section .sh-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(255,255,255,0.85); color: #16222c;
+            border-radius: 100px; padding: 6px 12px; font-size: 13px; font-weight: 600;
+            backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          }
+          .smarthome-section .sh-badge.sh-alarm { display: none; background: rgba(226,72,72,0.94); color: #fff; }
+          .smarthome-section .sh-room.armed .sh-alarm { display: inline-flex; }
+          /* status pill */
+          .smarthome-section .sh-status {
+            position: absolute; left: 14px; bottom: 14px; z-index: 4;
+            display: flex; align-items: center; gap: 9px;
+            background: rgba(12,20,30,0.74); color: #fff; padding: 9px 15px;
+            border-radius: 100px; font-size: 13px; font-weight: 500;
+            backdrop-filter: blur(4px); max-width: calc(100% - 28px);
+          }
+          .smarthome-section .sh-status-dot {
+            width: 9px; height: 9px; border-radius: 50%; background: var(--lox);
+            box-shadow: 0 0 0 4px rgba(105,195,80,0.28); flex: 0 0 auto;
+          }
+          /* control panel */
+          .smarthome-section .sh-panel {
+            background: #fff; border: 1px solid #e9edf1; border-radius: 18px;
+            padding: 18px; display: flex; flex-direction: column; gap: 14px;
+          }
+          .smarthome-section .sh-panel-head { display: flex; align-items: baseline; justify-content: space-between; }
+          .smarthome-section .sh-panel-head h5 { margin: 0; font-size: 16px; }
+          .smarthome-section .sh-scene-name { font-size: 13px; font-weight: 700; color: var(--lox); }
+          .smarthome-section .sh-scenes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          .smarthome-section .sh-scene {
+            border: 1px solid #d5dde4; background: #fff; color: #1c2b36;
+            border-radius: 12px; padding: 10px 6px; font-size: 13.5px; font-weight: 600;
+            cursor: pointer; transition: all 0.2s ease;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+          }
+          .smarthome-section .sh-scene:hover { border-color: var(--lox); }
+          .smarthome-section .sh-scene.active { background: var(--lox); border-color: var(--lox); color: #fff; }
+          .smarthome-section .sh-ctrls { display: flex; flex-direction: column; gap: 10px; }
+          .smarthome-section .sh-ctrl {
+            display: flex; align-items: center; gap: 10px;
+            background: #f5f8fb; border-radius: 12px; padding: 10px 12px;
+          }
+          .smarthome-section .sh-ctrl-ic { font-size: 18px; width: 22px; text-align: center; flex: 0 0 auto; }
+          .smarthome-section .sh-ctrl-label { font-size: 13.5px; font-weight: 600; flex: 0 0 66px; }
+          .smarthome-section .sh-ctrl-body { flex: 1; display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+          .smarthome-section .sh-val { font-size: 13px; font-weight: 700; color: #16222c; min-width: 44px; text-align: right; }
+          .smarthome-section input.sh-dimmer { flex: 1; accent-color: var(--lox); cursor: pointer; }
+          .smarthome-section .sh-mini {
+            background: #fff; border: 1px solid #d5dde4; color: #16222c;
+            width: 30px; height: 30px; border-radius: 8px; font-size: 16px; font-weight: 700;
+            cursor: pointer; transition: all 0.15s ease; line-height: 1;
+          }
+          .smarthome-section .sh-mini:hover { border-color: var(--lox); color: var(--lox); }
+          .smarthome-section .sh-switch { position: relative; width: 46px; height: 26px; flex: 0 0 auto; cursor: pointer; }
+          .smarthome-section .sh-switch input { opacity: 0; width: 0; height: 0; }
+          .smarthome-section .sh-switch .sh-slider { position: absolute; inset: 0; background: #cdd5dd; border-radius: 100px; transition: 0.25s; }
+          .smarthome-section .sh-switch .sh-slider::before {
+            content: ""; position: absolute; height: 20px; width: 20px; left: 3px; top: 3px;
+            background: #fff; border-radius: 50%; transition: 0.25s;
+          }
+          .smarthome-section .sh-switch input:checked + .sh-slider { background: var(--lox); }
+          .smarthome-section .sh-switch input:checked + .sh-slider::before { transform: translateX(20px); }
+
+          /* energy flow */
+          .smarthome-section .sh-energy {
+            background: #0f1b26;
+            border-radius: 22px;
+            padding: 30px 26px;
+            margin-bottom: 34px;
+            color: #fff;
+          }
+          .smarthome-section .sh-energy h4 { font-size: 20px; margin: 0 0 6px; }
+          .smarthome-section .sh-energy .sh-energy-sub { font-size: 14px; opacity: 0.7; margin: 0 0 24px; }
+          .smarthome-section .sh-flow {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+          }
+          .smarthome-section .sh-node {
+            flex: 0 0 auto;
+            width: 96px;
+            text-align: center;
+            font-size: 12.5px;
+            line-height: 1.3;
+            opacity: 0.92;
+          }
+          .smarthome-section .sh-node-ic {
+            width: 58px; height: 58px;
+            margin: 0 auto 8px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px;
+          }
+          .smarthome-section .sh-node-brain .sh-node-ic {
+            background: linear-gradient(145deg, var(--lox), var(--lox-dark));
+            border-color: transparent;
+            box-shadow: 0 0 26px rgba(105, 195, 80, 0.5);
+          }
+          .smarthome-section .sh-node-brain { font-weight: 700; }
+          .smarthome-section .sh-link {
+            flex: 1 1 30px;
+            min-width: 30px;
+            height: 4px;
+            border-radius: 4px;
+            background-image: repeating-linear-gradient(90deg, var(--lox) 0 8px, transparent 8px 22px);
+            background-size: 22px 100%;
+            animation: sh-flow 1.1s linear infinite;
+          }
+          @keyframes sh-flow {
+            from { background-position: 0 0; }
+            to { background-position: 22px 0; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .smarthome-section .sh-link { animation: none; }
+          }
+          .smarthome-section .sh-cta { text-align: center; }
+        </style>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="headline-wrap headline-general">
+                <img class="lamp-icon" src="./assets/img/icons/lamp_icon.png" alt="Icon" />
+                <h3>Smart Home mit Loxone</h3>
+              </div>
+              <p class="sh-intro">
+                Licht, Beschattung, Heizung, Sicherheit und Ihre Energie – ein
+                System, zentral gesteuert über einen Loxone Miniserver. Als
+                Elektro-, Photovoltaik- und Wärmepumpen-Fachbetrieb planen,
+                installieren und programmieren wir alles aus einer Hand.
+              </p>
+            </div>
+
+            <div class="col-12">
+              <div class="sh-tiles">
+                <div class="sh-tile">
+                  <div class="sh-ic">💡</div>
+                  <h5>Licht &amp; Szenen</h5>
+                  <p>Per Knopfdruck, App oder automatisch: Szenen wie „Kommen“, „Kino“ oder „Nacht“ für jeden Raum.</p>
+                </div>
+                <div class="sh-tile">
+                  <div class="sh-ic">🪟</div>
+                  <h5>Beschattung</h5>
+                  <p>Rollläden und Jalousien fahren automatisch nach Sonnenstand, Temperatur und Tageszeit.</p>
+                </div>
+                <div class="sh-tile">
+                  <div class="sh-ic">🌡️</div>
+                  <h5>Einzelraum-Heizung</h5>
+                  <p>Jeder Raum in Wohlfühltemperatur – die Wärmepumpe wird effizient und bedarfsgerecht gesteuert.</p>
+                </div>
+                <div class="sh-tile">
+                  <div class="sh-ic">🔒</div>
+                  <h5>Zutritt &amp; Sicherheit</h5>
+                  <p>Türkommunikation, Präsenzerkennung, Alarm und Anwesenheits-Simulation für ein sicheres Zuhause.</p>
+                </div>
+                <div class="sh-tile is-accent">
+                  <div class="sh-ic">⚡</div>
+                  <h5>Energiemanagement</h5>
+                  <p>PV-Überschuss lädt Speicher &amp; E-Auto und schaltet die Wärmepumpe dann, wenn der Strom am günstigsten ist.</p>
+                </div>
+                <div class="sh-tile">
+                  <div class="sh-ic">📱</div>
+                  <h5>Eine App für alles</h5>
+                  <p>Ein Miniserver, eine Oberfläche – ganz ohne Cloud-Zwang, lokal und dauerhaft ohne Abo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="sh-demo">
+                <div class="sh-demo-head">
+                  <h4>Szene wählen – Ihr Zuhause reagiert</h4>
+                  <span class="sh-live"><span class="sh-live-dot"></span>Live-Demo · zum Ausprobieren</span>
+                </div>
+                <div class="sh-stage">
+                  <div class="sh-room" data-sky="day">
+                    <div class="sh-glow"></div>
+                    <div class="sh-lamp"></div>
+                    <div class="sh-window">
+                      <div class="sh-sun"></div>
+                      <div class="sh-moon"></div>
+                      <div class="sh-stars"></div>
+                      <div class="sh-shade"></div>
+                    </div>
+                    <div class="sh-tv"></div>
+                    <div class="sh-tv-stand"></div>
+                    <div class="sh-floor"></div>
+                    <div class="sh-sofa"></div>
+                    <div class="sh-plant"></div>
+                    <div class="sh-badges">
+                      <span class="sh-badge"><span class="sh-thermo-val">22</span> °C</span>
+                      <span class="sh-badge sh-alarm">🔒 Alarm scharf</span>
+                    </div>
+                    <div class="sh-status">
+                      <span class="sh-status-dot"></span>
+                      <span class="sh-status-text">Willkommen zu Hause · Licht 100 % · Rollläden offen · 22 °C</span>
+                    </div>
+                  </div>
+
+                  <div class="sh-panel">
+                    <div class="sh-panel-head">
+                      <h5>Wohnzimmer</h5>
+                      <span class="sh-scene-name">Kommen</span>
+                    </div>
+                    <div class="sh-scenes">
+                      <button type="button" class="sh-scene active" data-scene="kommen">🏠 Kommen</button>
+                      <button type="button" class="sh-scene" data-scene="gehen">🚪 Gehen</button>
+                      <button type="button" class="sh-scene" data-scene="kino">🎬 Kino</button>
+                      <button type="button" class="sh-scene" data-scene="nacht">🌙 Nacht</button>
+                    </div>
+                    <div class="sh-ctrls">
+                      <div class="sh-ctrl">
+                        <span class="sh-ctrl-ic">💡</span>
+                        <span class="sh-ctrl-label">Licht</span>
+                        <div class="sh-ctrl-body">
+                          <input type="range" class="sh-dimmer" min="0" max="100" value="100" aria-label="Licht dimmen">
+                          <span class="sh-val sh-light-val">100 %</span>
+                        </div>
+                      </div>
+                      <div class="sh-ctrl">
+                        <span class="sh-ctrl-ic">🪟</span>
+                        <span class="sh-ctrl-label">Rollläden</span>
+                        <div class="sh-ctrl-body">
+                          <button type="button" class="sh-mini" data-shade="up" aria-label="Rollläden hoch">▲</button>
+                          <button type="button" class="sh-mini" data-shade="down" aria-label="Rollläden runter">▼</button>
+                          <span class="sh-val sh-shade-val">offen</span>
+                        </div>
+                      </div>
+                      <div class="sh-ctrl">
+                        <span class="sh-ctrl-ic">📺</span>
+                        <span class="sh-ctrl-label">TV</span>
+                        <div class="sh-ctrl-body">
+                          <label class="sh-switch"><input type="checkbox" class="sh-tv-toggle"><span class="sh-slider"></span></label>
+                        </div>
+                      </div>
+                      <div class="sh-ctrl">
+                        <span class="sh-ctrl-ic">🌡️</span>
+                        <span class="sh-ctrl-label">Heizung</span>
+                        <div class="sh-ctrl-body">
+                          <button type="button" class="sh-mini" data-temp="down" aria-label="Wärmer">−</button>
+                          <span class="sh-val sh-temp-val">22 °C</span>
+                          <button type="button" class="sh-mini" data-temp="up" aria-label="Kälter">+</button>
+                        </div>
+                      </div>
+                      <div class="sh-ctrl">
+                        <span class="sh-ctrl-ic">🔒</span>
+                        <span class="sh-ctrl-label">Alarm</span>
+                        <div class="sh-ctrl-body">
+                          <label class="sh-switch"><input type="checkbox" class="sh-alarm-toggle"><span class="sh-slider"></span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="sh-energy">
+                <h4>Intelligentes Energiemanagement</h4>
+                <p class="sh-energy-sub">Der Loxone Miniserver steuert, wohin Ihr selbst erzeugter Strom fließt.</p>
+                <div class="sh-flow">
+                  <div class="sh-node"><div class="sh-node-ic">☀️</div>PV-Anlage</div>
+                  <div class="sh-link"></div>
+                  <div class="sh-node"><div class="sh-node-ic">🔋</div>Speicher</div>
+                  <div class="sh-link"></div>
+                  <div class="sh-node sh-node-brain"><div class="sh-node-ic">🧠</div>Loxone Miniserver</div>
+                  <div class="sh-link"></div>
+                  <div class="sh-node"><div class="sh-node-ic">♨️</div>Wärmepumpe</div>
+                  <div class="sh-link"></div>
+                  <div class="sh-node"><div class="sh-node-ic">🚗</div>Wallbox</div>
+                  <div class="sh-link"></div>
+                  <div class="sh-node"><div class="sh-node-ic">⚡</div>Netz</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="sh-cta">
+                <a href="form_elektro.html" data-id="angebot-btn" class="btn-main btn-color btn-medium">
+                  <span class="btn-text">Smart-Home-Beratung</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          (function () {
+            var demo = document.querySelector('#smarthome .sh-demo');
+            var room = document.querySelector('#smarthome .sh-room');
+            if (!demo || !room) return;
+
+            var $ = function (s) { return demo.querySelector(s); };
+            var statusText = $('.sh-status-text');
+            var sceneName = $('.sh-scene-name');
+            var sceneBtns = demo.querySelectorAll('.sh-scene');
+            var dimmer = $('.sh-dimmer');
+            var lightVal = $('.sh-light-val');
+            var shadeVal = $('.sh-shade-val');
+            var tempVal = $('.sh-temp-val');
+            var thermoVal = $('.sh-thermo-val');
+            var tvToggle = $('.sh-tv-toggle');
+            var alarmToggle = $('.sh-alarm-toggle');
+
+            var presets = {
+              kommen: { bri: 100, shade: 0, tv: false, temp: 22, alarm: false, sky: 'day', name: 'Kommen',
+                        status: 'Willkommen zu Hause · Licht 100 % · Rollläden offen · 22 °C' },
+              gehen:  { bri: 0, shade: 55, tv: false, temp: 18, alarm: true, sky: 'day', name: 'Gehen',
+                        status: 'Alles aus · Alarm scharf · Heizung abgesenkt' },
+              kino:   { bri: 15, shade: 100, tv: true, temp: 22, alarm: false, sky: 'night', name: 'Kino',
+                        status: 'Kino läuft · Licht 15 % · Rollläden geschlossen' },
+              nacht:  { bri: 0, shade: 100, tv: false, temp: 20, alarm: false, sky: 'night', name: 'Nacht',
+                        status: 'Gute Nacht · Licht aus · Rollläden zu · 20 °C' }
+            };
+
+            var state = Object.assign({}, presets.kommen);
+
+            function shadeLabel(v) { return v <= 0 ? 'offen' : v >= 100 ? 'zu' : v + ' %'; }
+
+            function render(syncControls) {
+              room.style.setProperty('--bri', state.bri / 100);
+              room.style.setProperty('--shade', state.shade);
+              room.setAttribute('data-sky', state.sky);
+              room.classList.toggle('tv-on', state.tv);
+              room.classList.toggle('armed', state.alarm);
+              lightVal.textContent = state.bri + ' %';
+              shadeVal.textContent = shadeLabel(state.shade);
+              tempVal.textContent = state.temp + ' °C';
+              thermoVal.textContent = state.temp;
+              sceneName.textContent = state.name;
+              if (syncControls) {
+                dimmer.value = state.bri;
+                tvToggle.checked = state.tv;
+                alarmToggle.checked = state.alarm;
+              }
+            }
+
+            function applyScene(key) {
+              state = Object.assign({}, presets[key]);
+              sceneBtns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-scene') === key); });
+              statusText.textContent = state.status;
+              render(true);
+            }
+
+            function manual() {
+              state.name = 'Manuell';
+              sceneBtns.forEach(function (b) { b.classList.remove('active'); });
+              statusText.textContent = 'Manuell · Licht ' + state.bri + ' % · Rollläden ' + shadeLabel(state.shade) + ' · ' + state.temp + ' °C';
+              render(false);
+            }
+
+            sceneBtns.forEach(function (btn) {
+              btn.addEventListener('click', function () { applyScene(btn.getAttribute('data-scene')); });
+            });
+            dimmer.addEventListener('input', function () {
+              state.bri = parseInt(dimmer.value, 10);
+              if (state.bri > 0 && state.sky === 'night') { /* keep sky */ }
+              manual();
+            });
+            demo.querySelectorAll('[data-shade]').forEach(function (b) {
+              b.addEventListener('click', function () {
+                var dir = b.getAttribute('data-shade');
+                state.shade = Math.max(0, Math.min(100, state.shade + (dir === 'down' ? 25 : -25)));
+                manual();
+              });
+            });
+            demo.querySelectorAll('[data-temp]').forEach(function (b) {
+              b.addEventListener('click', function () {
+                var dir = b.getAttribute('data-temp');
+                state.temp = Math.max(16, Math.min(26, state.temp + (dir === 'up' ? 1 : -1)));
+                manual();
+              });
+            });
+            tvToggle.addEventListener('change', function () { state.tv = tvToggle.checked; manual(); });
+            alarmToggle.addEventListener('change', function () { state.alarm = alarmToggle.checked; manual(); });
+
+            // auto-demo: cycles scenes, pauses while the user is interacting
+            var order = ['kommen', 'kino', 'nacht', 'gehen'];
+            var idx = 0;
+            var paused = false;
+            var resumeTimer = null;
+            function pause() { paused = true; if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; } }
+            function resumeLater() { if (resumeTimer) clearTimeout(resumeTimer); resumeTimer = setTimeout(function () { paused = false; }, 5000); }
+            demo.addEventListener('pointerenter', pause);
+            demo.addEventListener('pointerleave', resumeLater);
+            setInterval(function () {
+              if (paused) return;
+              idx = (idx + 1) % order.length;
+              applyScene(order[idx]);
+            }, 3800);
+
+            render(true);
+          })();
+        </script>
+      </section>
 
       <section id="quote" class="quote-section">
         <div class="container">
@@ -1268,6 +1884,77 @@
                         besonders auf den Erhalt des historischen Charakters
                         Ihrer Immobilie, während wir die Elektrik auf den
                         neuesten Stand bringen.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item animation">
+                  <div class="accordion-header" id="heading-5">
+                    <div
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-5"
+                      aria-expanded="false"
+                      aria-controls="collapse-5"
+                    >
+                      <h6>
+                        Kann Loxone meine PV-Anlage und Wärmepumpe steuern?
+                      </h6>
+                      <img
+                        src="./assets/img/icons/plus-icon-elektro.svg"
+                        alt="Plus Icon"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    id="collapse-5"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading-5"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Ja. Genau darin liegt unsere Stärke: Als Elektro-,
+                        Photovoltaik- und Wärmepumpen-Fachbetrieb verbinden wir
+                        alle Komponenten zu einem System. Der Loxone Miniserver
+                        nutzt Ihren PV-Überschuss gezielt für Speicher, Wallbox
+                        und Wärmepumpe und senkt so Ihre Energiekosten spürbar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item animation">
+                  <div class="accordion-header" id="heading-6">
+                    <div
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-6"
+                      aria-expanded="false"
+                      aria-controls="collapse-6"
+                    >
+                      <h6>
+                        Lässt sich Loxone auch nachrüsten und funktioniert es
+                        ohne Cloud?
+                      </h6>
+                      <img
+                        src="./assets/img/icons/plus-icon-elektro.svg"
+                        alt="Plus Icon"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    id="collapse-6"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading-6"
+                    data-bs-parent="#faq-accordion"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        Loxone lässt sich sowohl im Neubau als auch bei einer
+                        Sanierung nachrüsten – kabelgebunden oder per Funk (Loxone
+                        Air). Das System arbeitet lokal auf dem Miniserver, also
+                        ohne Cloud-Zwang und ohne monatliche Abo-Gebühren. Ihr
+                        Zuhause bleibt auch ohne Internet voll funktionsfähig.
                       </p>
                     </div>
                   </div>
